@@ -21,6 +21,7 @@ public:
 	std::string to_string();
 	State get_src();
 	State get_dest();
+	std::string get_content();
 	virtual ~Arrow();
 };
 

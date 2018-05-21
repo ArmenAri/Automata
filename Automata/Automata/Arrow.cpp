@@ -24,6 +24,11 @@ State Arrow::get_dest() {
 	return m_dest;
 }
 
+std::string Arrow::get_content()
+{
+	return m_content;
+}
+
 Arrow::~Arrow()
 {
 
