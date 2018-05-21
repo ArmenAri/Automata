@@ -10,6 +10,12 @@ State::State(std::string name, bool is_final)
 	m_is_final = is_final;
 }
 
+State::State(std::string name)
+{
+	m_name = name;
+	m_is_final = false;
+}
+
 std::string State::get_name()
 {
 	return m_name;

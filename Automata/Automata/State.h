@@ -15,6 +15,7 @@ public:
 	*@param : name, child, is_final
 	*/
 	State(std::string, bool);
+	State(std::string);
 
 	std::string get_name();
 	bool is_final();

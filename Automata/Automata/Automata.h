@@ -6,7 +6,7 @@
 #include"Arrow.h"
 #include<time.h>
 
-#define MAX_ITER 100000
+#define MAX_ITER 10000
 
 class Automata
 {
