@@ -17,10 +17,9 @@ std::string Automata::build_random_word(int size)
 	State curr = m_arrows[0].get_src();
 	State next;
 	Arrow currArrow = m_arrows[0];
-	srand(time(NULL));
 	int rand;
 	do  {
-		rand = std::rand() % 5;
+		rand = std::rand() % size + 1;
 		for (Arrow a : m_arrows) {
 			if (a.get_src().get_name() == curr.get_name()) {
 				next = a.get_dest();
@@ -37,6 +36,20 @@ std::string Automata::build_random_word(int size)
 		i++;
 	} while (!curr.is_final() && i <= size);
 	return word;
+}
+
+bool Automata::contains(std::string word)
+{
+	std::string str;
+	int max_iter = 0;
+	while ((str = build_random_word(word.length())) != word && max_iter <= MAX_ITER) {
+		max_iter++;
+		continue;
+	}
+	if (max_iter >= MAX_ITER) {
+		return false;
+	}
+	return true;
 }
 
 std::string Automata::to_string()

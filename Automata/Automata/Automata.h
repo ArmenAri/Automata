@@ -6,6 +6,8 @@
 #include"Arrow.h"
 #include<time.h>
 
+#define MAX_ITER 100000
+
 class Automata
 {
 private:
@@ -14,7 +16,10 @@ private:
 public:
 	Automata(std::vector<Arrow>);
 	virtual ~Automata();
+
 	std::string build_random_word(int);
+	bool contains(std::string);
+
 	std::string to_string();
 };
 

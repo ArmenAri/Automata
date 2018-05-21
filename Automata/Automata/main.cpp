@@ -6,14 +6,19 @@
 int main() {
 	std::cout << "Automata Project" << std::endl;
 
-	State q2("q2", false);
+	srand(time(NULL));
+
 	State q1("q1", false);
 	State q0("q0", false);
+	State q2("q2", false);
+	State q3("q3", true);
 
-	Arrow a0("b", q0, q0);
-	Arrow a1("a", q0, q1);
-	Arrow a2("b", q1, q2);
-	Arrow a3("c", q2, q0);
+
+	Arrow a0("a", q0, q1);
+	Arrow a1("a", q1, q2);
+	Arrow a2("b", q2, q2);
+	Arrow a3("a", q2, q3);
+
 
 	std::vector<Arrow> states;
 
@@ -25,7 +30,8 @@ int main() {
 	Automata a(states);
 
 	std::cout << a.to_string() << std::endl;
-	std::cout << a.build_random_word(1000) << std::endl;
+	std::cout << ((a.contains("aaba")) ? "true" : "false") << std::endl;
+
 	system("pause");
 	return 0;
 }
