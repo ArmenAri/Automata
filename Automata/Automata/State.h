@@ -21,4 +21,3 @@ public:
 	bool is_final();
 	virtual ~State();
 };
-

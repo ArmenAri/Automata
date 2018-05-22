@@ -115,9 +115,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Arrow.cpp" />
     <ClCompile Include="Automata.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Arrow.cpp" />
     <ClCompile Include="State.cpp" />
   </ItemGroup>
   <ItemGroup>

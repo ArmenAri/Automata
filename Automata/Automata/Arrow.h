@@ -24,4 +24,3 @@ public:
 	std::string get_content();
 	virtual ~Arrow();
 };
-

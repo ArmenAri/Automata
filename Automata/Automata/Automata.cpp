@@ -2,7 +2,7 @@
 
 Automata::Automata(std::vector<Arrow> states)
 {
-		m_arrows = states;
+	m_arrows = states;
 }
 
 Automata::~Automata()
@@ -18,7 +18,7 @@ std::string Automata::build_random_word(int size)
 	State next;
 	Arrow currArrow = m_arrows[0];
 	int rand;
-	do  {
+	do {
 		rand = std::rand() % size + 1;
 		for (Arrow a : m_arrows) {
 			if (a.get_src().get_name() == curr.get_name()) {
@@ -66,7 +66,7 @@ std::string Automata::to_string()
 		else {
 			str += a.get_src().get_name() + a.to_string() + a.get_dest().get_name();
 		}
-		
+
 		old_src = a.get_dest();
 	}
 	return str;
